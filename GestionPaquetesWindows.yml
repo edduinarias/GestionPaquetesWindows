@@ -1,0 +1,6 @@
+---
+- name: GESTION PAQUETES WINDOWS ACCION {{ 'ACTION' }}
+  gather_facts: false
+  hosts: all
+  roles:
+    - GestionPaquetesWindows

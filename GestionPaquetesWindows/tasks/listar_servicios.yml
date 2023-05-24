@@ -1,0 +1,6 @@
+- name: LISTANDO LOS SERVICIOS WINDOWS
+  win_command: powershell.exe Get-Service
+  register: lista_programa
+- name:
+  debug:
+    msg: '{{ lista_programa.stdout }}'

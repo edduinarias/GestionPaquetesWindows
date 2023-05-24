@@ -1,0 +1,6 @@
+- name: LISTANDO LOS PROGRAMAS INSTALADOS WINDOWS
+  win_command: powershell.exe wmic  product get name,version
+  register: lista_programa
+- name:
+  debug:
+    msg: '{{ lista_programa.stdout }}'

@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+  gather_facts: false
+  tasks:
+  - name: Copy File
+    win_copy:
+      src: C:\archivo\output.txt
+      dest: C:\archivo\output2.txt
+      remote_src: yes

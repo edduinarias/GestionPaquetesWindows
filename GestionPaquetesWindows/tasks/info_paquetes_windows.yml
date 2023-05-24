@@ -1,0 +1,7 @@
+- name: Get disk facts
+  win_command: powershell.exe Get-WmiObject -Class Win32_Product | Select-Object -Property Name
+  register: lista_paquetes_windows
+- name:
+  debug:
+    msg: '{{ lista_paquetes_windows.stdout }}'
+

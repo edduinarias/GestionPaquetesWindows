@@ -1,0 +1,6 @@
+- name: Desinstalar Paquete Windows
+  win_package: 
+    path: C:\Instaladores\winzip_es_64.msi
+    #path: C:\Instaladores\'{{ ruta_instalador_paqute }}'
+    state: absent
+

@@ -1,0 +1,14 @@
+- name: Descargando el Instalador del Paquete
+  win_get_url:
+    url: https://download.winzip.com/gl/gad/winzip27.exe
+    dest: C:\Instaladores\instalador.msi
+  when: download
+
+- name: Instalando el Paquete Windows
+  win_package: 
+    path: C:\Instaladores\winzip_es_64.msi
+    state: present
+#     arguments:
+#       - /install
+#       - /passive
+#       - /norestart

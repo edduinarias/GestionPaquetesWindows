@@ -1,0 +1,30 @@
+---
+- debug: 
+    msg: Identificacion Accion...
+  
+- include: iniciar_servicio.yml
+  when: action == "iniciar_servicio"
+
+- include: detener_servicio.yml
+  when: action == "detener_servicio"
+
+- include: reiniciar_servicio.yml
+  when: action == "reiniciar_servicio"
+
+- include: listar_servicios.yml
+  when: action == "listar_servicios"
+    
+- include: instalar_paquete.yml
+  when: action == "instalar_paquete"
+
+- include: desinstalar_paquete.yml
+  when: action == "desinstalar_paquete"
+
+- include: info_paquetes_windows.yml
+  when: action == "info_paquetes_windows"
+
+- include: listar_programas.yml
+  when: action == "listar_programas"
+
+- include: validar_servicio_instalado.yml
+  when: action == "validar_servicio_instalado"
